@@ -4,22 +4,33 @@
  */
 package softwaredesings5;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 /**
  *
  * @author kenny
  */
 public class EmpleadoPermanente extends Empleado {
 
-    private double salarioBase;
+    private double salarioBase, valorHoraExtra;
     private int horasExtra;
 
-    public EmpleadoPermanente(String nombre, String apellido) {
-        super(nombre, apellido);
+    public EmpleadoPermanente(double salarioBase, double valorHoraExtra, int horasExtra, String nombre, String apellido, LocalDate fechaIngreso) {
+        super(nombre, apellido, fechaIngreso);
+        this.salarioBase = salarioBase;
+        this.valorHoraExtra = valorHoraExtra;
+        this.horasExtra = horasExtra;
     }
 
     @Override
     public double calcularSalario() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        double salarioTotal = salarioBase + (horasExtra * valorHoraExtra);
+        return salarioTotal;
     }
 
+    public String calcularRegalo() {
+        // Lógica para determinar si el empleado es elegible para el regalo y generar el mensaje correspondiente
+        return "Regalo para vacaciones otorgado";
+    }
 }
