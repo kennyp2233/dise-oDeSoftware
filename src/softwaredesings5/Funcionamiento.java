@@ -8,7 +8,7 @@ package softwaredesings5;
  *
  * @author kenny
  */
-public class SoftwareDesingS5 {
+public class Funcionamiento {
 
     /**
      * @param args the command line arguments

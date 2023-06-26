@@ -30,7 +30,9 @@ public class EmpleadoPermanente extends Empleado {
     }
 
     public String calcularRegalo() {
-        // Lógica para determinar si el empleado es elegible para el regalo y generar el mensaje correspondiente
-        return "Regalo para vacaciones otorgado";
+        if (haCumplidoTresAnios()) {
+            return "Regalo para vacaciones otorgado";
+        }
+        return null;
     }
 }
