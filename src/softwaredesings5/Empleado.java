@@ -34,4 +34,9 @@ public abstract class Empleado {
     public String getNombre() {
         return this.nombre;
     }
+
+    public String getApellido() {
+        return apellido;
+    }
+
 }
